@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-set -eux
+set -eu
 
 /setup-ssh.sh
 
@@ -16,7 +16,7 @@ echo "ls -al\n: $(ls -al)"
 
 
 # Git options
-export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_rsa_di_codecommit -o StrictHostKeyChecking=no -l $INPUT_SSH_USERNAME"
+export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -l $INPUT_SSH_USERNAME"
 
 # Make sure remote "mirror" does not exist. Ignore error if not exists
 git remote rm mirror || true
