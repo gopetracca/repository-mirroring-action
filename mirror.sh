@@ -1,7 +1,19 @@
 #!/usr/bin/env sh
-set -eu
+set -eux
 
 /setup-ssh.sh
+
+
+echo "run pwd and ls **************"
+echo "pwd: $(pwd)"
+echo "ls -al\n: $(ls -al)"
+
+cd $INPUT_WORKDIR
+
+echo "run pwd and ls **************"
+echo "pwd: $(pwd)"
+echo "ls -al\n: $(ls -al)"
+
 
 # Git options
 export GIT_SSH_COMMAND="ssh -v -i ~/.ssh/id_rsa_di_codecommit -o StrictHostKeyChecking=no -l $INPUT_SSH_USERNAME"
