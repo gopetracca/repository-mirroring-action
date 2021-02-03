@@ -14,6 +14,9 @@ inputs:
     description: "Username for ssh connection"
     required: false
     default: "git"
+  workdir:
+    description: "Path to repo"
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
