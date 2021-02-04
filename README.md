@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:                                              # <-- must use actions/checkout@v1 before mirroring!
     - uses: actions/checkout@v1
-    - uses: pixta-dev/repository-mirroring-action@v1
+    - uses: gopetracca/repository-mirroring-action@v1
       with:
         target_repo_url:
           git@gitlab.com:<username>/<target_repository_name>.git
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
-    - uses: pixta-dev/repository-mirroring-action@v1
+    - uses: gopetracca/repository-mirroring-action@v1
       with:
         target_repo_url:
           ssh://git-codecommit.<somewhere>.amazonaws.com/v1/repos/<target_repository_name>
